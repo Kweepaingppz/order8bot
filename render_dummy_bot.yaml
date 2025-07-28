@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: worker
     name: dummy-telegram-bot
     env: python
     buildCommand: "pip install -r requirements.txt"
@@ -13,5 +13,3 @@ services:
         sync: false
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
-
-
