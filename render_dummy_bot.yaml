@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dummy-telegram-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python dummy_bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+
+
